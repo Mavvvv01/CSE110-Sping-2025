@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Task1{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    String input = sc.nextLine();
+    for(i=0;i<input.length();i++){
+      if(input.codeAtPoint(i)>=97 && input.codeAtPoint<=122){
+        int lower_case = input.codeAtPoint(i);
+        int higher_case = lower_case+32;
+        char higher_letter = (char)higher_case;
+        System.out.println(higher_case);
+      }else{
+        System.out.println(input.charAt(i));
+      }
+    }
+  }
+}
+        
