@@ -1,0 +1,165 @@
+//Task1
+import java.util.Scanner;
+public class Task1{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    oneToN(1, N);
+    System.out.println();
+    nToOne(1, N);
+    System.out.println();
+    System.out.println(recursiveSum(1, N));
+  }
+  public static void oneToN(int first, int last){
+    if(first == last){
+      System.out.print(last  + " ");
+    }
+    else{
+      System.out.print(first + " ");
+      oneToN(first+1, last);
+    }
+  }
+  public static void nToOne(int first, int last){
+    if(last == first){
+      System.out.print(first + " ");
+    }
+    else{
+      System.out.print(last + " ");
+      nToOne(first, last-1);
+    }
+  }
+  public static int recursiveSum(int first, int last){
+    if(first==last){
+      return last;
+    }
+    else{
+      return first + recursiveSum(first+1, last);
+    }
+  }
+}
+
+
+
+//Task2
+public class Task2{
+  public static void main(String[]args){
+    int n=12345;
+    reverseDigits(n);
+  }
+  public static void reverseDigits(int num){
+    if(num==0){
+      return;
+    }
+    else{
+      System.out.println(num%10);
+      reverseDigits(num/10);
+    }
+  }
+}
+
+
+//Task3
+public class Task3{
+  public static void main(String[]args){
+    int n = 12345;
+    int x = sumDigits(n);
+    System.out.println(x);
+  }
+  public static int sumDigits(int num){
+    if(num==0){
+      return 0;
+    }
+    else{
+      return num%10 + sumDigits(num/10);
+    }
+  }
+}
+
+
+//Task4
+public class Task4{
+  public static void main(String[]args){
+    System.out.println(reverse_string("Hello", 0));
+  }
+  public static String reverse_string(String str, int index){
+    if(index==str.length()-1){
+      return ""+str.charAt(index);
+    }
+    else{
+      return reverse_string(str, index+1) + str.charAt(index);
+    }
+  }
+}
+    
+    
+//Task5
+public class Task5{
+  public static void main(String[]args){
+    int n = 7;
+    int x = factorial(n);
+    System.out.println(x);
+  }
+  public static int factorial(int input){
+    if(input==0){
+      return 1;
+    }
+    else{
+      return input*factorial(input-1);
+    }
+  }
+}
+
+
+//Task6
+public class Task6{
+  public static void main(String[]args){
+    int x = power(5, 3);
+    System.out.println(x);
+  }
+  public static int power(int base, int exponent){
+    if(exponent==0){
+      return 1;
+    }
+    else{
+      return base * power(base, exponent-1);
+    }
+  }
+}
+
+
+//Task7
+public class Task7{
+  public static void main(String[]args){
+    int[] arr = {5,6,2,1,8,7};
+    int index = 2;
+    print_element(arr, index);
+  }
+  public static void print_element(int[] arr1, int ind){
+    if(ind==arr1.length){
+      return;
+    }
+    else{
+      System.out.println(arr1[ind]);
+      print_element(arr1, ind+1);
+    }
+  }
+}
+
+
+//Task8
+public class Task8{
+  public static void main(String[]args){
+    System.out.println(fibonacci(9));
+  }
+  public static int fibonacci(int n){
+    if(n==0){
+      return 0;
+    }else if(n==1){
+      return 1;
+    }else{
+      return fibonacci(n-1)+fibonacci(n-2);
+    }
+  }
+}
+      
+    

@@ -1,0 +1,298 @@
+//TASK1a
+public class Task1a{
+  public static void main(String[]args){
+    for(int i=24;i>= -6;i-=6){
+      System.out.print(i + ",");
+    }
+    System.out.println(" ");
+  }
+}
+
+
+//TASK1b
+public class Task1b{
+  public static void main(String[]args){
+    int sign = 1;
+    for(int i=18;i<= 63;i+=9){
+      System.out.print(i*sign + ",");
+      sign*= -1;
+    }
+    System.out.println(" ");
+  }
+}
+
+
+//TASK2
+import java.util.Scanner;
+public class Task2{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter N: ");
+    int n = sc.nextInt();
+    int sum = 0;
+    
+    System.out.println("Input the " + n + " numbers: ");
+    for(int i =1;i<=n;i++){
+      int num = sc.nextInt();
+      sum +=num;
+    }
+    double average = (double)sum / n;
+    System.out.println("The sum of " + n + " no is : " +sum);
+    System.out.println("The average is: " + average);
+  }    
+}
+
+
+//TASK3
+public class Task3{
+  public static void main(String[]args){
+    int sum = 0;
+    for (int i = 1;i<=600;i++){
+      if(i%7==0 && i%9==0){
+        sum+=i;
+      }
+    }
+    System.out.println(sum);
+  }
+}
+
+
+
+//TASK4
+public class Task4{
+  public static void main(String[]args){
+    int sum = 0;
+    for(int i=1;i<=600;i++){
+      if(i%7==0 || i%9==0){
+        sum+=i;
+      }
+    }
+    System.out.println(sum);
+  }
+}
+
+
+
+//TASK5
+public class Task5{
+  public static void main(String[]args){
+    int sum = 0;
+    for(int i =0; i<=600;i++){
+      if((i%7==0 || i%9==0)&&!(i%7==0 && i%9==0)){
+        sum +=i;
+      }
+    }
+    System.out.println(sum);
+  }
+}
+
+
+//TASK6
+import java.util.Scanner;
+public class Task6{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    int n = sc.nextInt();
+    int y = 0;
+    int sign = 1;
+    
+    for(int i =1;i<=n; i++){
+      y+=sign*i*i;
+      sign*= -1;
+    }
+    System.out.println("The expression of y: " + y);
+  }
+}
+
+
+//TASK7
+import java.util.Scanner;
+public class Task7{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    int n = sc.nextInt();
+    for(int i =0; i<=n;i++){
+      if(i%5==0 && i%3!=0){
+        System.out.println(i);
+      }
+    }
+  }
+}
+
+
+//TASK8
+import java.util.Scanner;
+public class Task8{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter number: ");
+    for(int i=1;i>0;i++){
+      int num = sc.nextInt();
+      if(num<0){
+        break;
+      }
+      else{
+        System.out.println(num*num);
+       
+    }
+    }
+  }
+}
+
+
+
+//TASK 9
+import java.util.Scanner;
+public class Task9{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int n = sc.nextInt();
+    int nonNegative = 0;
+    int negative = 0;
+    for(int i = 1; i<=n;i++){
+      System.out.print("Enter number " + i + ":");
+      int num = sc.nextInt();
+      if(num>=0){
+        nonNegative++;
+      }
+      else{
+        negative++;
+      }
+    }
+    System.out.println(nonNegative + " Non-negative Numbers");
+    System.out.println(negative + " Negative numbers");
+  }
+}
+
+
+
+
+//TASK10
+import java.util.Scanner;
+public class Task10{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Input number of terms: ");
+    int n=sc.nextInt();
+    int sum = 0;
+    System.out.println("The odd numbers are: ");
+    for(int i=1;i<=n*2;i+=2){
+      System.out.println(i);
+      sum +=i;
+    }
+    System.out.println("The Sum of odd Natural Numbers up to 5 terms is: " + sum);
+  }
+}
+
+
+//TASK11
+import java.util.Scanner;
+public class Task11{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    int sum = 0;
+    for(int i =1; i<=10; i++){
+    System.out.println("Enter number: ");
+    int num = sc.nextInt();
+    sum +=num;
+    System.out.println("Sum = " + sum);
+    }
+  }
+}
+
+
+//TASK12
+import java.util.Scanner;
+public class Task12{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    int num = sc.nextInt();
+    System.out.println("Divisors of " + num);
+    for(int i=1;i<=num;i++){
+      if(num%i==0){
+        System.out.println(i);
+      }
+    }
+  }
+}
+
+
+
+//TASK13
+import java.util.Scanner;
+public class Task13{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter an integer: ");
+    int num = sc.nextInt();
+    int count = 0;
+    if(num ==0){
+      count = 1;
+    }
+    for(int num2=num;num2>0;num2/=10){
+      count++;
+    }
+    System.out.println("Total digits = " + count);
+  }
+}
+
+
+
+
+//TASK14
+import java.util.Scanner;
+public class Task14{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    int num = sc.nextInt();
+    while(num!=0){
+      System.out.println(num%10 + ", ");
+      num/=10;
+    }
+  }
+}
+
+
+
+
+//TASK15
+import java.util.Scanner;
+public class Task15{
+  public static void main(String[]args){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a number: ");
+    int num = sc.nextInt();
+    int temp = num; 
+    int digits = 0;    
+    while (temp!=0){
+      temp/=10;
+      digits++;
+    }
+    int divisor = 1;
+    for(int i = 1; i<digits; i++){
+      divisor*=10;
+    }
+    while(divisor !=0){
+      System.out.print(num/divisor + ", ");
+      num %=divisor;
+      divisor/=10;
+    }
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+

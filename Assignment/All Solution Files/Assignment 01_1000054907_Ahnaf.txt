@@ -1,0 +1,262 @@
+//TASK10
+a) Hungry - Valid
+b) 2AB - Invalid (Number in first digit)
+c) 312.2 - Invalid (Number in first digit)
+d) MOBILE - Valid
+e) "Ans" - Invalid (Double Quotation mark in variable)
+f) $30 - Valid
+g) Yes/No - Invalid ("/" sign in variable)
+h) student-id - Invalid ("-" sign in variable)
+i) A+3 - Invalid ("+" sign in variable)
+j) 'X'- Invalid (Quotation mark in variable)
+k) return - Invalid (Reserved word for Java)
+
+
+
+
+
+//TASK11(2.1) 
+public class Task11{
+  public static void main (String [] args){
+    int num1 = 6;
+    System.out.println(6);
+}
+}
+
+
+//TASK11(2.2)
+public class Task11{
+  public static void main (String [] args){
+    int num1 = 6;
+    int num2 = 3;
+    System.out.println(6);
+    System.out.println(num1+num2);
+}
+}
+
+
+//TASK11(2.3)
+public class Task11{
+  public static void main (String [] args){
+    int num1 = 6;
+    int num2 = 3;
+    System.out.println(6);
+    System.out.println(num1+num2);
+    System.out.println(num1*num2);
+    System.out.println(num1/num2);
+}
+}
+
+
+//TASK11(2.4)
+public class Task11{
+  public static void main (String [] args){
+    double num1 = 6.1;
+    double num2 = 3.3;
+    System.out.println(num1);
+    System.out.println(num1+num2);
+    System.out.println(num1*num2);
+    System.out.println(num1/num2);
+}
+}
+
+
+//TASK11(2.5)
+public class Task11{
+  public static void main (String [] args){
+    double num1 = 6.1;
+    int num2 = 3;
+    System.out.println(num1);
+    System.out.println(num1+num2);
+    System.out.println(num1*num2);
+    System.out.println(num1/num2);
+}
+}
+
+
+//TASK11(2.6a)
+
+public class Task11{
+  public static void main (String [] args){
+    String num1 = "6";
+    String num2 = "3";
+    System.out.println(num1);
+    System.out.println(num1+num2);  ///RESULT: The value of the variables will be alongside each other if we add them.
+}
+}
+
+
+
+
+
+/TASK11(2.6b)
+public class Task11{
+  public static void main (String [] args){
+    String num1 = "6";
+    int num2 = 3;
+    System.out.println(num1);
+    System.out.println(num1+num2);  // RESULT: The integer will be alongside the string, behaving like a string itself.
+}
+}
+
+
+
+
+
+//TASK12
+public class Task12{
+  public static void main (String [] args){
+    int r = 4;
+    double circumference = 2*Math.PI*r;
+    double area = Math.PI*r*r;
+    
+    System.out.println(circumference);
+    System.out.println(area);
+    
+}
+}
+
+
+
+//TASK13
+public class Task13{
+  public static void main (String [] args){
+    int a = 4532;
+    int lastTwoDigits = a%100;
+    
+    System.out.println(lastTwoDigits);
+}
+}
+
+
+
+
+//TASK14
+public class Task14{
+  public static void main (String [] args){
+    int inches = 1000;
+    double meters = inches*0.0254;
+    
+    System.out.println(meters);
+}
+}
+
+
+
+
+//TASK15(A)
+public class Task15a{
+  public static void main (String [] args){
+    int a = 5;   //a is the first variable
+    int b = 6;   //b is the second variable
+    int c = a;   //c is the third variable used to swap the values of a and b
+    a = b;
+    b = c;
+    
+    System.out.println(a);
+    System.out.println(b);
+          
+}
+}
+
+
+//TASK15(B)
+public class Task15b{
+  public static void main (String [] args){
+    int a = 5;   //a is the first variable
+    int b = 6;   //b is the second variable
+    a = a+b;
+    b = a-b;  //11-6 = 5
+    a = a-b;  //11-5 = 6
+    
+    System.out.println(a);
+    System.out.println(b);
+          
+}
+}
+
+
+//TASK16
+public class Task16{
+  public static void main (String [] args){
+        int min = 3456789;
+        int days = min / (60 * 24);
+        int years = days / 365;
+        int finalDays = days % 365; 
+        System.out.println(min + " minutes is approximately " + years + " years and " + finalDays + " days.");                             
+  }
+}
+
+
+
+//TASK17
+public class Task17{
+  public static void main (String [] args){
+    int a = 2;
+    int b = 5;
+    int c = 8;
+    
+    int d = (2*b*(c-a)/3)+7;
+    System.out.println(d);
+  }
+}
+
+
+
+//TASK18
+public class Task18{
+  public static void main (String [] args){
+    int id = 1000054907;
+    int lastDigit = id%10;
+    int beforeLastDigit = (id/10)%10;
+    
+    System.out.println(beforeLastDigit);
+    System.out.println(lastDigit);    
+  }
+}
+
+
+//TASK19
+public class Task19{
+  public static void main (String [] args){
+    double a = 8 ;
+    double a2 = a/2;
+    double b = 3;
+    double c = (Math.sqrt(a2*a2+b*b)); //finding hypotenuse by pythagoras theorem
+    double triangleArea = (0.5*a2*b);
+    double circumference = c*6;
+    double area = ((triangleArea*4) + (a*c));
+    System.out.println(area);
+    System.out.println(circumference);
+  }
+}
+
+
+
+
+//TASK20
+public class Task20{
+  public static void main (String [] args){
+    double a = 4.5;
+    double b = 9.5;
+    double c = Math.sqrt(a*a+b*b);
+    
+    double sinA = a/c;
+    double cosA = b/c;
+    double sinB = b/c;
+    double cosB = a/c;
+    
+    
+    System.out.println("The Sin and Cos values of Angle A is " + sinA + " and " + cosA + " respectively");
+    System.out.println("The Sin and Cos values of Angle B is " + sinB + " and " + cosB + " respectively");
+  }
+}
+
+
+
+
+
+
+
+
+
